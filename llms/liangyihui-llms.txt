@@ -1,0 +1,36 @@
+# liangyihui
+
+> liangyihui operates the web property at liangyihui.net and was surfaced as a portfolio
+> company of the venture firm Qiming. As of 2026-07-19 the company publishes no public
+> developer program — no developer portal, no API documentation or reference, no OpenAPI,
+> AsyncAPI or GraphQL definition, no first-party SDKs on any public package registry, and
+> no working /.well-known/ discovery surface. A live but undocumented first-party API host
+> exists at api.liangyihui.net. This file is generated from the API Evangelist catalog
+> profile; it asserts nothing the pipeline did not verify directly.
+
+## Profile
+
+- [API Evangelist profile (APIs.json)](https://raw.githubusercontent.com/api-evangelist/liangyihui/refs/heads/main/apis.yml): the machine-readable catalog entry for liangyihui.
+- [Website](https://www.liangyihui.net): the company's public web property. Served behind a Chinese CDN (Tengine / kunlunpi) bot shield that returns an obfuscated JavaScript challenge for every path.
+
+## APIs
+
+No public API is documented or discoverable for liangyihui.
+
+- `https://api.liangyihui.net` — a live first-party API host. Its root returns a Tomcat-served "Welcome to LYH!" page and it returns genuine HTTP 404s for probe paths. It appears to serve the company's own web and mobile clients and is not a documented public API. No specification, authentication documentation, or rate-limit policy is published for it.
+
+## Artifacts
+
+- [Domain security](security/liangyihui-domain-security.yml): probed TLS, HSTS, DNSSEC, CAA, SPF and DMARC posture for liangyihui.net and its hosts.
+- [Well-known probe](well-known/liangyihui-well-known.yml): results of probing the /.well-known/ discovery surface on both hosts, including the soft-404 evidence for the site host.
+
+## Not published
+
+The following were searched for and not found, and are recorded here so agents do not
+re-derive them speculatively: OpenAPI / Swagger definition, AsyncAPI or webhook catalog,
+GraphQL schema, Postman collection, MCP server, developer portal, API reference,
+getting-started guide, changelog, status page, deprecation policy, pricing page,
+terms of service, privacy policy, security.txt, vulnerability-disclosure program,
+trust center, CLI, embedded UI components, sandbox or test credentials, and first-party
+SDK packages on npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist and
+crates.io.

@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.liangyihui.net
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan 27 23:59:59 2027 GMT
+  hsts: false
+- host: api.liangyihui.net
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan 27 23:59:59 2027 GMT
+  hsts: false
+  notes: private first-party API host; root returns Tomcat "Welcome to LYH!", server
+    header Tengine
+domains:
+- domain: liangyihui.net
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false

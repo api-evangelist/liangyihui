@@ -1,0 +1,61 @@
+generated: '2026-07-19'
+method: probed
+source: live HTTP probes of liangyihui hosts
+result: none
+summary: >-
+  No real /.well-known/ discovery document is published on any liangyihui host. The
+  public site host (www.liangyihui.net) returns HTTP 200 for every path, but the body
+  is byte-identical to the site's obfuscated JavaScript bot-shield challenge — a soft
+  404, not a document. This was verified by comparing response checksums for
+  /.well-known/security.txt, a deliberately non-existent control path, and the site
+  root: all three are identical. The private API host (api.liangyihui.net) returns
+  genuine Tomcat HTTP 404s. Only /robots.txt on the site host returns a real document.
+  No WellKnown or SecurityTxt pointer is wired in apis.yml, because no document exists.
+hosts:
+- host: https://www.liangyihui.net
+  soft_404: true
+  soft_404_evidence: response body for /.well-known/security.txt, /nonexistent-path-xyz123
+    and / are byte-identical (md5 b78f4bbd22b604443cf8d447891d1bd3)
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    real: false
+    note: soft 404 — bot-shield challenge body
+  - path: /.well-known/openid-configuration
+    status: 200
+    real: false
+    note: soft 404 — bot-shield challenge body
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    real: false
+    note: soft 404 — bot-shield challenge body
+  - path: /.well-known/api-catalog
+    status: 200
+    real: false
+    note: soft 404 — bot-shield challenge body
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    real: false
+  - path: /llms.txt
+    status: 200
+    real: false
+    note: soft 404 — bot-shield challenge body
+  - path: /robots.txt
+    status: 200
+    real: true
+    note: 'real document; content: User-agent: * / Allow: /'
+- host: https://api.liangyihui.net
+  soft_404: false
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
