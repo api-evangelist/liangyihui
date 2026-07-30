@@ -1,7 +1,30 @@
 aid: liangyihui
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/liangyihui.png
 name: liangyihui
-description: liangyihui is a company surfaced as a portfolio company of qiming and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'liangyihui is a company operating the web property at liangyihui.net,
+  surfaced as a portfolio company of the venture firm Qiming and added to the API Evangelist
+  network for enrichment. As of this enrichment pass the company publishes no public
+  developer program: no developer portal, no API reference or documentation, no OpenAPI,
+  AsyncAPI or GraphQL definition, no first-party SDK packages on any public registry,
+  and no working /.well-known/ discovery surface. The public site is served from Chinese
+  CDN infrastructure (Tengine / kunlunpi) behind a bot shield that answers every path
+  with the same obfuscated JavaScript challenge, so the property soft-404s and cannot
+  be crawled or inspected. A live API host does exist at api.liangyihui.net: it answers
+  its root with a Tomcat-served "Welcome to LYH!" page and returns genuine HTTP 404s
+  for probe paths, indicating a real but private first-party backend for the company''s
+  own clients rather than a documented public API. This profile records verified DNS,
+  TLS and endpoint posture only; no API artifacts have been fabricated.'
 url: https://raw.githubusercontent.com/api-evangelist/liangyihui/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +34,14 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- China
+- Venture Backed
+- Qiming Portfolio
+- Private API
+- No Public API Program
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +50,13 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://liangyihui.net
+  url: https://www.liangyihui.net
+- type: DomainSecurity
+  url: security/liangyihui-domain-security.yml
+- type: LLMsTxt
+  url: llms/liangyihui-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
