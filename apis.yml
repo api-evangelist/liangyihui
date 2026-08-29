@@ -37,6 +37,8 @@ description: 'liangyihui is a company operating the web property at liangyihui.n
   own clients rather than a documented public API. This profile records verified DNS,
   TLS and endpoint posture only; no API artifacts have been fabricated.'
 url: https://raw.githubusercontent.com/api-evangelist/liangyihui/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
