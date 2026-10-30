@@ -64,23 +64,79 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-liangyihui operates the web property at [liangyihui.net](https://www.liangyihui.net) and was surfaced as a portfolio company of the venture firm Qiming.
+liangyihui is a company operating the web property at liangyihui.net, surfaced as a portfolio company of the venture firm Qiming and added to the API Evangelist network for enrichment. As of this enrichment pass the company publishes no public developer program: no developer portal, no API reference or documentation, no OpenAPI, AsyncAPI or GraphQL definition, no first-party SDK packages on any public registry, and no working /.well-known/ discovery surface. The public site is served from Chinese CDN infrastructure (Tengine / kunlunpi) behind a bot shield that answers every path with the same obfuscated JavaScript challenge, so the property soft-404s and cannot be crawled or inspected. A live API host does exist at api.liangyihui.net: it answers its root with a Tomcat-served "Welcome to LYH!" page and returns genuine HTTP 404s for probe paths, indicating a real but private first-party backend for the company's own clients rather than a documented public API. This profile records verified DNS, TLS and endpoint posture only; no API artifacts have been fabricated.
 
-## Public API program: none found
+**Areas:** Company · China · Qiming Portfolio · Private API · No Public API Program
 
-As of the 2026-07-19 enrichment pass, liangyihui publishes **no public developer program**. Searched and not found: developer portal, API documentation or reference, OpenAPI / Swagger / AsyncAPI / GraphQL definition, Postman collection, MCP server, changelog, status page, pricing, terms of service, privacy policy, `security.txt`, vulnerability-disclosure program, trust center, CLI, sandbox credentials, and first-party SDK packages on npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist and crates.io.
+## liangyihui on APIs.io
 
-Two findings shaped this pass:
+Everything profiled for liangyihui is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/liangyihui/](https://apis.io/providers/liangyihui/)** — or go straight to one of the APIs or properties below.
 
-- **The site host soft-404s.** `www.liangyihui.net` returns HTTP 200 for *every* path, but the body is byte-identical to its obfuscated JavaScript bot-shield challenge (Tengine / kunlunpi CDN). A 200 from this host is not evidence a document exists — verified by checksum against a control path. Only `/robots.txt` returns a real document. The apex `liangyihui.net` does not respond.
-- **A private API host exists.** `api.liangyihui.net` is live, serves a Tomcat `Welcome to LYH!` root, and returns genuine 404s. It appears to back the company's own clients; nothing about it is publicly documented.
+### Published properties
 
-No API artifacts have been fabricated.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Artifacts
+#### Security (1)
 
-| Artifact | File |
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Liangyihui Domain Security](https://apis.io/security/liangyihui/liangyihui-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.liangyihui.net)
+
+## API Evangelist rating
+
+**Kin Score 4.2** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| Domain security (probed) | `security/liangyihui-domain-security.yml` |
-| Well-known probe (no documents) | `well-known/liangyihui-well-known.yml` |
-| llms.txt (generated) | `llms/liangyihui-llms.txt` |
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/liangyihui/](https://apis.io/providers/liangyihui/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for liangyihui: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/liangyihui/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
